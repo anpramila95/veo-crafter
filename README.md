@@ -1,6 +1,6 @@
 # VeoCrafter – VEO3-Powered Viral Add Generator
 
-> **Turn any idea into a scroll-stopping AI video, powered by Google's VEO-3—no design skills required.**
+> **Turn any idea into a scroll-stopping AI video, powered by Google's VEO-3, no design skills required.**
 
 ## ✨ Overview
 
