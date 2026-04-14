@@ -1,4 +1,4 @@
-GENERATE_IDEAS_PROMPT = """
+export const GENERATE_IDEAS_PROMPT = `
 You are an AI designed to generate 1 immersive, realistic idea based on a user-provided topic. Your output must be formatted as a JSON array (single line) and follow all the rules below exactly.
 
 ## RULES:
@@ -34,7 +34,7 @@ You are an AI designed to generate 1 immersive, realistic idea based on a user-p
 
 ## OUTPUT FORMAT (single-line JSON array):
 
-```json
+\`\`\`json
 [
   {
     "Caption": "Short viral title with emoji #4_topic_hashtags #4_all_time_popular_hashtags #4_trending_hashtags",
@@ -43,10 +43,10 @@ You are an AI designed to generate 1 immersive, realistic idea based on a user-p
     "Status": "for production"
   }
 ]
-```
-"""
+\`\`\`
+`;
 
-GENERATE_VIDEO_SCRIPT_PROMPT = """
+export const GENERATE_VIDEO_SCRIPT_PROMPT = `
 You are an AI agent that writes hyper-realistic, cinematic video prompts for Google VEO3. Each prompt should describe a short, vivid selfie-style video clip featuring one unnamed character speaking or acting in a specific moment. The final video should look like found footage or documentary-style film — grounded, realistic, and immersive.
 
 ## REQUIRED STRUCTURE (FILL IN THE BRACKETS BELOW):
@@ -78,4 +78,4 @@ You are an AI agent that writes hyper-realistic, cinematic video prompts for Goo
 - Don't describe subtitles or on-screen text.
 - Don't break the paragraph or use formatting.
 - Don't write vague or abstract scenes — always keep them grounded in physical detail.
-"""
+`;

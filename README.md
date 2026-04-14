@@ -43,7 +43,7 @@ Topic Input → Concept Agent → Prompt Agent → VEO-3 Rendering → Excel Log
 
 | Requirement | Purpose |
 |-------------|---------|
-| **Python 3.12+** | Modern async features and library compatibility |
+| **Node.js 18+** | Runtime environment |
 | **fal.ai API Key** | Access to Google's VEO-3 model |
 | **LLM API Key** | Concept generation (OpenRouter/OpenAI/Claude) |
 
@@ -51,10 +51,13 @@ Topic Input → Concept Agent → Prompt Agent → VEO-3 Rendering → Excel Log
 
 ```
 veo-crafter/
-├── main.py              # Main orchestration script
-├── prompts.py           # System prompts and templates
-├── utils.py             # API utilities and Excel export
-├── requirements.txt     # Python dependencies
+├── src/
+│   ├── main.ts          # Main orchestration script
+│   ├── prompts.ts       # System prompts and templates
+│   ├── utils.ts         # API utilities and Excel export
+│   └── videoGen.ts      # fal.ai VEO3 integration
+├── package.json         # Node.js dependencies
+├── tsconfig.json        # TypeScript configuration
 ├── .env                 # Environment variables (not tracked)
 └── videos.xlsx          # Generated video log (auto-created)
 ```
@@ -65,20 +68,11 @@ veo-crafter/
 
 ```bash
 # Clone the repository
-git clone https://github.com/prajvalrasik/veo-crafter.git
-cd ad_generation_agent
-
-# Create virtual environment (recommended)
-python -m venv venv
-
-# Activate virtual environment
-# Windows:
-.\venv\Scripts\Activate.ps1
-# macOS/Linux:
-source venv/bin/activate
+git clone https://github.com/anpramila95/veo-crafter.git
+cd veo-crafter
 
 # Install dependencies
-pip install -r requirements.txt
+npm install
 ```
 
 ### 2. Configuration
@@ -92,17 +86,24 @@ OPENROUTER_API_KEY=your_openrouter_key_here
 
 ### 3. Usage
 
-Edit `main.py` to set your desired topic and video count:
+Edit `src/main.ts` to set your desired topic and video count:
 
-```python
-topic = "Alien food critic reviews Earth cuisine"
-count = 3  # Number of videos to generate
+```typescript
+const topic = "Alien food critic reviews Earth cuisine";
+const count = 3; // Number of videos to generate
 ```
 
 Run the generator:
 
 ```bash
-python main.py
+npm start
+```
+
+Or build and run the compiled output:
+
+```bash
+npm run build
+node dist/main.js
 ```
 
 ### 4. Results

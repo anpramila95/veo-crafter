@@ -1,0 +1,35 @@
+{
+  "name": "veo-crafter",
+  "version": "1.0.0",
+  "description": "Turn any idea into a scroll-stopping AI video, powered by Google's VEO-3, no design skills required.",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsx src/main.ts",
+    "dev": "tsx watch src/main.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anpramila95/veo-crafter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/anpramila95/veo-crafter/issues"
+  },
+  "homepage": "https://github.com/anpramila95/veo-crafter#readme",
+  "dependencies": {
+    "@fal-ai/client": "^1.9.5",
+    "@langchain/openai": "^1.4.4",
+    "dotenv": "^16.6.1",
+    "exceljs": "^4.4.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.17",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
