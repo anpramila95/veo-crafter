@@ -106,7 +106,7 @@ export async function logToExcel(
   }
 
   // rowIndex is 0-based data row; ExcelJS rows are 1-based with row 1 = header
-  const dataRowCount = worksheet.rowCount - 1; // subtract header
+  const dataRowCount = worksheet.rowCount > 0 ? worksheet.rowCount - 1 : 0;
 
   if (rowIndex !== undefined && rowIndex >= 0 && rowIndex < dataRowCount) {
     // Update existing row (ExcelJS row = rowIndex + 2 because row 1 is header)
